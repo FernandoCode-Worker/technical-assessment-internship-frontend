@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1: Create a Responsive Navigation Bar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <!--Task 1-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand">About Myself</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active bg-success text-white toggle-content" href="#" data-target="Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bg-info text-white toggle-content" href="#" data-target="About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bg-warning text-dark toggle-content" href="#" data-target="Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container d-none" id="Home">
+        <h2>Responsive Navigation Bar Home Page</h2>
+        <p>Click on the links to see the content change.</p>
+        <div id="content" class="alert alert-success">
+            <h3>Welcome to My Page!</h3>
+            <p>This is the home section.</p>
+        </div>
+    </div>
+
+    <div class="container d-none" id="About">
+        <h2>This is all about Me</h2>
+        <div id="content" class="alert alert-info">
+            <h3>Name: Fernando Lim Jia Yee</h3>
+            <p>Age: <strong>21</strong></p>
+            <p>Education: <strong>Bachelor's Degree</strong></p>
+            <p>Major: <strong>Artificial Intelligence</strong></p>
+            <p>Current CGPA: <strong>3.95</strong></p>
+        </div>
+        <br>
+        <h4>Skills and Expertise:</h4>
+        <ul>
+            <li><strong>Programming Languages:</strong> Python, Java, C++, JavaScript, C#</li>
+            <li><strong>Data Analysis & Visualization:</strong> Pandas, Matplotlib, Seaborn, SkLearn</li>
+            <li><strong>Frameworks & Tools:</strong> PyTorch, JQuery</li>
+            <li><strong>Software Development:</strong> Object-Oriented Programming (OOP), Agile Methodologies</li>
+        </ul>
+        <br>
+        <h4>Key Achievements:</h4>
+        <ul>
+            <li>Completed a research project on <strong>AI-driven Image Recognition</strong> that achieved an accuracy of 98% using convolutional neural networks (CNN).</li>
+            <li>Developed a predictive model for <strong>stock market trends</strong> using machine learning algorithms.</li>
+            <li>Recognized as a top performer in my university's AI programming competition (2024).</li>
+            <li>Participated in a collaborative project with a tech company on <strong>AI-powered chatbots</strong>.</li>
+        </ul>
+        <br>
+        <h4>Career Goals:</h4>
+        <p>My long-term goal is to contribute to cutting-edge innovations in AI and make a meaningful impact in industries such as healthcare, finance, or robotics. I am eager to work in an environment that encourages learning and creativity, and I aspire to be part of a team that pioneers AI solutions for real-world problems.</p>
+    </div>
+
+    <div class="container d-none" id="Contact">
+        <h2>Contact Information</h2>
+        <p>If you would like to get in touch with me, please feel free to reach out through the following channels:</p>
+        <div id="content" class="alert alert-success">
+            <h2>This is my contact number</h2>
+            <p>Phone Number: 016-812 1050</p>
+            <p>Email: <a href="mailto:fernandolimjiayee@gmail.com">fernandolimjiayee@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/lim-jia-yee-fernando-7a701b330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Fernando's LinkedIn account</a></p>
+            <p>GitHub: <a href="https://github.com/FernandoCode-Worker">Fernando's GitHub account</a></p>
+        </div>
+    </div>
+    <br>
+    <script>
+        $(document).ready(function () {
+            $(".toggle-content").click(function (e) {
+                e.preventDefault();
+                $("#Home, #About, #Contact").addClass("d-none");
+                var target = $(this).data("target");
+                $("#" + target).removeClass("d-none");
+            });
+        });
+    </script>
+
+    <!--Task 2-->
+    <div class="container-fuild">
+                <div class="row card-grid d-flex align-items-stretch">
+                    <div class="bg-secondary"><h1>Types of Rooms</h1></div>
+                    <div class="col-sm-4 bg-warning h-200">
+                        <div class="card-header"><h1 class="text-center">Standard Room</h1></div>
+                        <div class="card-body d-flex flex-column"><img src="https://lh5.googleusercontent.com/proxy/X9j1LzcpFPRODNhRXKmJzZX5Y6DXmmPQ8R614G13-sx6g6Dy9IjflSdOW_YTj7nJwIECUAzeWTqzfce8Q45NeYF0GDFqntluQyafwcHLKrtX66SfipCqa7hDLtecX4cSXsA_oKqGaD9841S1zxo06RWbg10YxIAhgQ" class="img-fluid" alt="Standard Room">
+                        <br>
+                        <ul>
+                            <li>Price: RM100 - RM200</li>
+                            <li>Size: 20m²</li>
+                            <li>Bed:
+                                <ul>
+                                    <li>1 King size Bed</li>
+                                    <li>1 Queen size Bed</li>
+                                    <li>2 Single Beds</li>
+                                </ul>
+                            </li>
+                            <li>Capacity: 2 People</li>
+                            <li>Facilities:
+                                <ul>
+                                    <li>Free Wi-Fi</li>
+                                    <li>Air Conditioning</li>
+                                    <li>TV</li>
+                                    <li>Private Bathroom</li>
+                                </ul>
+                            </li>
+                            <li>Ideal for solo travelers, couples, or small groups</li>
+                        </ul>
+                        </div>
+                        <div class="card-footer text-center mt-auto"><button onclick="document.location='https://www.mysoftinn.com/hotel-booking-engine'">Start Booking</button></div>
+                    </div>
+                    <div class="col-sm-4 bg-primary h-150 text-white">
+                        <div class="card-header"><h1 class="text-center">Deluxe Room</h1></div>
+                        <div class="card-body d-flex flex-column"><img src="https://mresort-hotel.com.my/wp-content/uploads/2022/08/23-copy-web.jpg" class="img-fluid" alt="Deluxe Room">
+                            <br>
+                            <ul>
+                            <li>Price: RM200 - RM300</li>
+                            <li>Size: 30m²</li>
+                            <li>Bed:
+                                <ul>
+                                    <li>1 King size Bed</li>
+                                    <li>2 Queen size Beds</li>
+                                </ul>
+                            </li>
+                            <li>Capacity: 4 People</li>
+                            <li>Facilities:
+                                <ul>
+                                    <li>Free Wi-Fi</li>
+                                    <li>Air Conditioning</li>
+                                    <li>TV</li>
+                                    <li>Private Bathroom</li>
+                                    <li>Mini Bar</li>
+                                </ul>
+                            </li>
+                            <li>Ideal for families or small groups</li>
+                        </div>
+                        <div class="card-footer text-center mt-auto"><button onclick="document.location='https://www.mysoftinn.com/hotel-booking-engine'" class="text-dark">Start Booking</button></div>
+                    </div>
+                    <div class="col-sm-4 bg-success h-100">
+                        <div class="card-header"><h1 class="text-center">Suite</h1></div>
+                        <div class="card-body d-flex flex-column"><img src="https://ejmse4m6ybw.exactdn.com/assets/containers/main/57-1718269413.jpg/2c213ea1c87a981b8fdd14dad32828ca.jpg" class="img-fluid" alt="Suite">
+                            <br>
+                            <ul>
+                            <li>Price: RM400 - RM600</li>
+                            <li>Size: 60m²</li>
+                            <li>Bed:
+                                <ul>
+                                    <li>1 King size Bed</li>
+                                    <li>2 Queen size Beds</li>
+                                </ul>
+                            </li>
+                            <li>Capacity: 6 People</li>
+                            <li>Facilities:
+                                <ul>
+                                    <li>Free Wi-Fi</li>
+                                    <li>Air Conditioning</li>
+                                    <li>TV in living and bedroom</li>
+                                    <li>Private Bathroom with Bathtub</li>
+                                    <li>Mini Bar</li>
+                                    <li>Kitchenette</li>
+                                    <li>Separate Living Area</li>
+                                    <li>Room Service</li>
+                                    <li>Complimentary Toiletries</li>
+                                </ul>
+                            </li>
+                            <li>Ideal for families, business travelers, or luxury stays</li>
+                        </div>
+                        <div class="card-footer text-center mt-auto"><button onclick="document.location='https://www.mysoftinn.com/hotel-booking-engine'">Start Booking</button></div>
+                    </div>
+                </div> 
+            </div>
+            
+</body>
+<footer>
+    
+    <!--Task 3-->
+    <div class="container-fluid bg-light">
+    <div class="text-center p-3">
+        <h1>Contact Form</h1>
+        <form action="https://www.mysoftinn.com/hotel-booking-engine" method="POST"> <!--Or other PHP files-->
+            Name:
+            <div class="form-floating mb-3 mt-3">
+                <input type="text" id="name" name="name" placeholder="Please enter your name" class="form-control" required>
+                <label for="name">Name</label>
+            </div>
+            <div class="input-group mb-3 mt-3">
+                <input type="text" id="email" name="email" placeholder="Please enter your email" class="form-control" required>
+                <span class="input-group-text"><select class="form-select" id="emailDomain" name="emailDomain">
+                    <option>@gmail.com</option>
+                    <option>@outlook.com</option>
+                    <option>@hotmail.com</option>
+                    <option>@yahoo.com</option>
+                    <option>@icloud.com</option>
+                </select></span>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+                <textarea class="form-control h-75" id="message" name="message" placeholder="Please enter your message"></textarea>
+                <label for="name">Message Field</label>
+            </div>
+            <button type="submit" class="btn btn-primary text-center" id="SubmitForm">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!--Task 4-->
+<script>
+    $(document).ready(function () {
+        $("#SubmitForm").click(function (e) {
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var emailDomain = $("#emailDomain").val();
+            var message = $("#message").val();
+            var messageContent = "Name: \n" + name + "\nEmail: \n" + email +emailDomain+ "\nMessage: \n" + message;
+            alert(messageContent);
+            e.preventDefault();
+        });
+    });
+</script>
+</footer>
+</html>
